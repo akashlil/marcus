@@ -1,0 +1,56 @@
+.service>* {
+    width: 33.333%;
+}
+
+.service.style1 {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #FFE2D1;
+    transition: all 0.3s ease;
+
+    .service-img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 30px;
+    }
+
+    .service-title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 31.2px;
+        margin-bottom: 10px;
+    }
+
+    .service-desp {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27.2px;
+        color: #606060;
+    }
+
+    &:hover {
+        background-color: #fff5ef;
+        border: 1px solid transparent;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .service.style1 {
+        flex-wrap: wrap;
+    }
+
+    .service>* {
+        width: auto;
+    }
+
+}

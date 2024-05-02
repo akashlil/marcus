@@ -1,0 +1,193 @@
+.resume-container {
+    background-color: #FFF3EA;
+}
+
+.skill-education-content.style1 {
+    display: flex;
+    gap: 50px;
+}
+
+.skill-education-content>* {
+    width: 50%;
+}
+
+.skill-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.skill-content>* {
+    width: 45%;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+
+    .img-top {
+        padding: 23px;
+        background-color: #fff;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .title-content {
+        display: flex;
+        padding: 10px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 5px;
+        border-right: 3px solid rgba(255, 107, 0, 0.20);
+        border-bottom: 3px solid rgba(255, 107, 0, 0.20);
+        border-left: 1px solid rgba(255, 107, 0, 0.20);
+        background: var(--White, #FFF);
+        font-size: 18px;
+        color: #101010;
+
+        p {
+            font-weight: 500;
+        }
+
+        span {
+            color: #FF6B00;
+
+        }
+    }
+}
+
+
+.experiences-education-content {
+    .experiences-education-btn {
+        border-radius: 5px;
+        border: 1px solid #FF6B00;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .tab-common-btn {
+            max-width: 378px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #101010;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: #fff;
+                color: #FF6B00;
+            }
+        }
+    }
+}
+
+.experiences-education-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .experiences-education {
+        display: flex;
+        align-items: center;
+
+        .experiences-img {
+            border: 1px solid #FF6B00;
+            border-radius: 50%;
+            width: 88px;
+            height: 88px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 30px;
+
+            img {
+                width: 23.966px;
+                height: 32px;
+            }
+        }
+
+        .experiences-conter {
+            .experiences-title {
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            .experiences-subtitle {
+                color: #101010;
+                font-size: 18px;
+                opacity: 0.65;
+            }
+        }
+    }
+
+    .dy {
+        text-align: end;
+
+        h4 {
+            color: #FF6B00;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #101010;
+        }
+    }
+}
+
+.Education {
+    display: none;
+}
+
+.active {
+    background-color: #FF6B00 !important;
+    color: #ffffff !important;
+}
+
+@media screen and (max-width: 767px) {
+    .skill-education-content.style1 {
+        flex-direction: column;
+    }
+
+    .skill-education-content>* {
+        width: 100%;
+    }
+
+    .experiences-education-card {
+        flex-direction: column;
+        gap: 20px;
+
+        .experiences-education {
+            flex-direction: column;
+
+            .experiences-conter {
+                text-align: center;
+            }
+
+
+            .experiences-img {
+                margin: 0;
+            }
+        }
+
+        .dy {
+            text-align: center;
+        }
+    }
+}

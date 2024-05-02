@@ -1,0 +1,45 @@
+.about.style1 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.about>* {
+    width: 50%;
+}
+
+
+.counter.style1 {
+    display: flex;
+    gap: 50px;
+
+    .counter-number {
+        color: $primary;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .counter-title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+        color: #101010;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+
+    .about.style1 {
+        flex-direction: column;
+    }
+
+    .about>* {
+        width: 100%;
+
+    }
+}

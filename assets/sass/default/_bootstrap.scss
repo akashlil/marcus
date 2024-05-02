@@ -1,0 +1,124 @@
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.section-title-content.style1 {
+    .section-subtitle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .section-title-main {
+        .section-title {
+            color: var(--heading-color);
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 57.2px;
+        }
+    }
+
+    &.type2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-title-content.style1 {
+        .section-title-main {
+            .section-title {
+                font-size: 38px;
+                line-height: 120%;
+            }
+        }
+
+        &.type2 {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+}
