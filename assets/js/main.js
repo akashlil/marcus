@@ -178,6 +178,7 @@
       });
     } */
   }
+
   const experiencesBtn = document.querySelector(".experiences-btn");
   const educationBtn = document.querySelector(".educationt-btn");
 

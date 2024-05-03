@@ -293,6 +293,145 @@ img {
   justify-content: center;
 }
 
+.set-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #000;
+  background-size: cover;
+  background-image: url("/assets/img/innerPageHeroBg.png");
+}
+
+.common-page-title {
+  padding-top: 100px;
+}
+.common-page-title .page-subtitle {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.skill-box .skill-text {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 15px;
+  position: relative;
+  background: rgb(255, 240, 229);
+  margin: 15px auto;
+}
+
+#Skill-HTML {
+  width: 90%;
+  animation: Animate-HTML 4s;
+  height: 10px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgb(255, 107, 0);
+}
+
+@keyframes Animate-HTML {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 90%;
+  }
+}
+#Responsive-Design {
+  width: 95%;
+  animation: Responsive-Design 4s;
+  height: 10px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgb(255, 107, 0);
+}
+
+@keyframes Responsive-Design {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 95%;
+  }
+}
+#Frameworks {
+  width: 80%;
+  animation: Frameworks 4s;
+  height: 10px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgb(255, 107, 0);
+}
+
+@keyframes Frameworks {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 80%;
+  }
+}
+#Optimization {
+  width: 85%;
+  animation: Optimization 4s;
+  height: 10px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgb(255, 107, 0);
+}
+
+@keyframes Optimization {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 85%;
+  }
+}
+#SEO {
+  width: 88%;
+  animation: SEO 4s;
+  height: 10px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgb(255, 107, 0);
+}
+
+@keyframes SEO {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 88%;
+  }
+}
+#JavaScript {
+  width: 93%;
+  animation: JavaScript 4s;
+  height: 10px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: rgb(255, 107, 0);
+}
+
+@keyframes JavaScript {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 93%;
+  }
+}
 @media screen and (max-width: 991px) {
   .section-title-content.style1 .section-title-main .section-title {
     font-size: 38px;
@@ -301,6 +440,11 @@ img {
   .section-title-content.style1.type2 {
     justify-content: flex-start;
     align-items: flex-start;
+  }
+}
+@media screen and (max-width: 767px) {
+  .set-bg {
+    height: 300px;
   }
 }
 /*--------------------------------------------------------------
@@ -1848,4 +1992,17 @@ img {
 }
 .copy-right .copy-title span {
   color: #FF6B00;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-content > * {
+    width: 100%;
+  }
+  .footer-content.style1 .quick-link-content {
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=style.css.map */
