@@ -2,11 +2,20 @@
     display: flex;
     flex-wrap: wrap;
 
+    &.typle2 {
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
 }
 
 .contact-content>* {
     width: 50%;
 }
+
+
+
 
 .email-content {
     display: flex;
@@ -70,15 +79,43 @@
     font-weight: 400;
 }
 
+.contact-page-img-content {
+    border-radius: 10px;
+    border: 1px solid rgba(#FF6B00, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 60px;
+    max-width: 435px;
+
+    .contact-page-title {
+        font-size: 38px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .contact-content {
         flex-direction: column;
         gap: 50px;
 
+        &.typle2 {
+            justify-content: center;
+        }
+
     }
 
     .contact-content>* {
         width: 100%;
+    }
+
+    .contact-page-img-content {
+        padding: 30px;
+        max-width: 100%;
+
+        .contact-page-title {
+            font-size: 26px;
+        }
     }
 
 }

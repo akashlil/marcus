@@ -105,6 +105,8 @@
         align-items: center;
         justify-content: center;
     }
+
+    // .type3 {}
 }
 
 .set-bg {
@@ -115,7 +117,6 @@
     height: 400px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid #000;
     background-size: cover;
     background-image: url("/assets/img/innerPageHeroBg.png");
 }
@@ -280,6 +281,11 @@
         &.type2 {
             justify-content: flex-start;
             align-items: flex-start;
+
+            &.center {
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }

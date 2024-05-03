@@ -32,6 +32,108 @@
 }
 
 
+.about-content {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+
+    .about-me-skill-content {
+        width: 50%;
+    }
+
+
+}
+
+.cta-container {
+    background-image: url(../img/conactCtaBg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 85px 30%;
+    border-radius: 10px;
+    animation-name: MoveBg;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+
+    .cta-subtitle {
+        color: #ffffff;
+    }
+
+    .cta-title {
+        color: #ffffff;
+    }
+}
+
+@keyframes MoveBg {
+    0% {
+        background-position: top;
+    }
+
+    25% {
+        background-position: right;
+    }
+
+    50% {
+        background-position: bottom;
+    }
+
+    75% {
+        background-position: left;
+    }
+}
+
+.counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px;
+    background-color: #fff3ea;
+    border-radius: 8px;
+
+    .orange-color {
+        color: $primary;
+        letter-spacing: 2px;
+        font-size: 42px;
+
+    }
+
+    .black-color {
+        font-weight: 400;
+    }
+
+}
+
+.counter-value {
+    animation: count 1s linear forwards;
+}
+
+.counter-value {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.counter-value.active {
+    opacity: 1;
+}
+
+@keyframes count {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 991px) {
 
     .about.style1 {
@@ -41,5 +143,34 @@
     .about>* {
         width: 100%;
 
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+        gap: 50px;
+
+        .about-me-skill-content {
+            width: 100%;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .cta-container {
+        padding: 59px 10%;
+    }
+
+    .counter-wrapper {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 436px) {
+    .counter-wrapper {
+        flex-direction: column;
     }
 }

@@ -14,7 +14,8 @@
     $(window).trigger("resize");
     mainNav();
     stickyHeader();
-    swiperInit();
+    startCounters();
+    experiences();
   });
 
   function mainNav() {
@@ -88,115 +89,52 @@
     });
   }
 
-  function swiperInit() {
-    if ($.exists(".slider_hero_1")) {
-      var swiper = new Swiper(".slider_hero_1", {
-        loop: true,
-        speed: 1200,
-        effect: "coverflow",
-        autoplay: true,
-        slidesPerView: 1,
-        keyboard: {
-          enabled: true,
-        },
-        navigation: {
-          nextEl: ".hero-swiper-button-prev-1",
-          prevEl: ".hero-swiper-button-next-1",
-        },
-      });
-    }
+  function experiences() {
+    if ($.exists(".experiences-btn")) {
+      const experiencesBtn = document.querySelector(".experiences-btn");
+      const educationBtn = document.querySelector(".educationt-btn");
 
-    if ($.exists(".slider_2")) {
-      var swiper = new Swiper(".slider_2", {
-        loop: true,
-        speed: 1000,
-        autoplay: false,
-        slidesPerView: "auto",
-        navigation: {
-          nextEl: ".slider_2-prev",
-          prevEl: ".slider_2-next",
-        },
-      });
-    }
+      const experiencesCards = document.querySelectorAll(".Experiences");
+      const educationCards = document.querySelectorAll(".Education");
 
-    if ($.exists(".partner-client-slider")) {
-      var swiper = new Swiper(".partner-client-slider", {
-        loop: true,
-        speed: 1000,
-        autoplay: true,
-        slidesPerView: "auto",
-        pagination: {
-          clickable: true,
-        },
-      });
-    }
+      experiencesBtn.addEventListener("click", () => {
+        experiencesCards.forEach((card) => (card.style.display = "block"));
+        educationCards.forEach((card) => (card.style.display = "none"));
 
-    /* if ($.exists(".ak-slider-testimonal")) {
-      var swiper = new Swiper(".ak-slider-testimonal", {
-        loop: true,
-        speed: 1000,
-        effect: "fade",
-        autoplay: false,
-        slidesPerView: "auto",
-        pagination: {
-          el: ".ak-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".testimonal-prev",
-          prevEl: ".testimonal-next",
-        },
+        educationBtn.classList.remove("active");
+        experiencesBtn.classList.add("active");
+      });
+
+      educationBtn.addEventListener("click", () => {
+        experiencesCards.forEach((card) => (card.style.display = "none"));
+        educationCards.forEach((card) => (card.style.display = "block"));
+        experiencesBtn.classList.remove("active");
+        educationBtn.classList.add("active");
       });
     }
- */
-    /*  if ($.exists(".team-single-page-slider")) {
-      var swiper = new Swiper(".team-single-page-slider", {
-        loop: true,
-        speed: 1000,
-        autoplay: true,
-        slidesPerView: "auto",
-        effect: "coverflow",
-        spaceBetween: "12%",
-        grabCursor: true,
-        centeredSlides: true,
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        },
-        keyboard: {
-          enabled: true,
-        },
-         mousewheel: {
-          thresholdDelta: 70,
-        },
-        navigation: {
-          nextEl: ".button-next",
-          prevEl: ".button-prev",
-        },
-      });
-    } */
   }
+  function startCounters() {
+    if ($.exists(".counter-wrapper")) {
+      const counters = {
+        experience: { current: 0, target: 9, step: 0.2 },
+        projects: { current: 0, target: 350, step: 3 },
+        clients: { current: 0, target: 254, step: 2 },
+        awards: { current: 0, target: 26, step: 0.5 },
+      };
 
-  const experiencesBtn = document.querySelector(".experiences-btn");
-  const educationBtn = document.querySelector(".educationt-btn");
+      const updateCounters = () => {
+        for (const counter in counters) {
+          if (counters.hasOwnProperty(counter)) {
+            if (counters[counter].current < counters[counter].target) {
+              counters[counter].current += counters[counter].step;
+              document.getElementById(`${counter}Counter`).textContent =
+                Math.round(counters[counter].current);
+            }
+          }
+        }
+      };
 
-  const experiencesCards = document.querySelectorAll(".Experiences");
-  const educationCards = document.querySelectorAll(".Education");
-
-  experiencesBtn.addEventListener("click", () => {
-    experiencesCards.forEach((card) => (card.style.display = "block"));
-    educationCards.forEach((card) => (card.style.display = "none"));
-    // experiencesBtn.classList.remove("active");
-    educationBtn.classList.remove("active");
-    experiencesBtn.classList.add("active");
-  });
-
-  educationBtn.addEventListener("click", () => {
-    experiencesCards.forEach((card) => (card.style.display = "none"));
-    educationCards.forEach((card) => (card.style.display = "block"));
-    experiencesBtn.classList.remove("active");
-    educationBtn.classList.add("active");
-  });
+      setInterval(updateCounters, 8);
+    }
+  }
 })(jQuery);

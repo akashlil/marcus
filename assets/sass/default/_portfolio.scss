@@ -70,3 +70,46 @@
 
     }
 }
+
+
+
+.portfolio-details-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .portfolio-details-img {
+        max-width: 411px;
+    }
+
+    .portfolio-details-info {
+        max-width: 650px;
+    }
+}
+
+.portfolio-details-gallery {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    img {
+        height: 100%;
+        width: 100%;
+        max-width: 640px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .portfolio-details-content {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .portfolio-details-gallery {
+        flex-direction: column;
+    }
+}

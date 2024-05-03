@@ -87,9 +87,10 @@
     }
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1699px) {
     .hero.style1 {
         height: 100%;
+        padding-top: 85px;
     }
 
     .hero-content {
@@ -97,6 +98,7 @@
         width: 100%;
         height: 100%;
         padding-top: 0;
+        gap: 50px;
 
         .hero-text {
             width: 50%;
@@ -118,6 +120,24 @@
                 height: auto;
                 bottom: 0;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .hero.style1 {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .hero-content {
+        .hero-images-content {
+            height: 700px;
+        }
+
+        .hero-text {
+            padding-bottom: 50px;
         }
     }
 }
