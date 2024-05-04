@@ -1377,7 +1377,7 @@ img {
 }
 .hero-content .hero-text {
   width: calc(84vw - 815px);
-  margin-top: 150px;
+  margin-top: 60px;
 }
 .hero-content .hero-text .hero-subtitle {
   color: var(--heading-color);
@@ -1388,18 +1388,41 @@ img {
   letter-spacing: 1.6px;
   text-transform: uppercase;
 }
+.hero-content .hero-text .hero-heading {
+  padding: 30px 0;
+}
+.hero-content .hero-text .hero-heading .type-writing {
+  color: #FF6B00;
+  font-family: Jost;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 600;
+}
+.hero-content .hero-text .hero-heading .type {
+  display: inline-block;
+}
+.hero-content .hero-text .hero-heading .type > span {
+  display: grid;
+  overflow: hidden;
+  height: 1.3em;
+}
+.hero-content .hero-text .hero-heading .type span span {
+  width: 0%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow: hidden;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t 2s linear infinite alternate;
+}
+.hero-content .hero-text .hero-heading .type span span:before {
+  content: " ";
+  overflow: hidden;
+  display: inline-block;
+}
 .hero-content .hero-text .hero-title {
   color: var(--heading-color);
   font-size: 71.741px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 105%;
-  margin-bottom: 35px;
-  margin-top: 35px;
-}
-.hero-content .hero-text .hero-title span {
-  color: var(--primary-color);
-  font-size: 89.676px;
   font-style: normal;
   font-weight: 600;
   line-height: 105%;
@@ -1457,6 +1480,9 @@ img {
     width: 50%;
     height: 100%;
   }
+  .hero-content .hero-text .hero-heading .type-writing {
+    font-size: 50px;
+  }
   .hero-content .hero-text .hero-title {
     font-size: 50px;
   }
@@ -1501,10 +1527,11 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
-  .hero-content .hero-text .hero-title {
-    font-size: 43px;
+  .hero-content .hero-text .hero-heading .type-writing {
+    font-size: 38px;
+    overflow: hidden;
   }
-  .hero-content .hero-text .hero-title span {
+  .hero-content .hero-text .hero-title {
     font-size: 43px;
   }
   .hero-content .hero-images-content {
@@ -1515,6 +1542,20 @@ img {
   .hero-content .hero-images-content {
     padding-top: 20%;
     height: 500px;
+  }
+}
+@keyframes t {
+  90%, 100% {
+    width: 100%;
+  }
+}
+@keyframes c {
+  0%, 100% {
+    border-right: 5px solid black;
+  }
+  50% {
+    overflow: hidden;
+    border-right: 5px solid red;
   }
 }
 .about.style1 {

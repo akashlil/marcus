@@ -4,7 +4,6 @@
 }
 
 .hero-content {
-    // position: absolute;
     display: flex;
     align-items: center;
     height: auto;
@@ -13,7 +12,7 @@
 
     .hero-text {
         width: calc(84vw - 815px);
-        margin-top: 150px;
+        margin-top: 60px;
 
         .hero-subtitle {
             color: var(--heading-color);
@@ -25,22 +24,54 @@
             text-transform: uppercase;
         }
 
+        .hero-heading {
+            padding: 30px 0;
+
+            .type-writing {
+                color: #FF6B00;
+                font-family: Jost;
+                font-size: 88px;
+                font-style: normal;
+                font-weight: 600;
+
+            }
+
+            .type {
+                display: inline-block;
+
+            }
+
+            .type>span {
+                display: grid;
+                overflow: hidden;
+                height: 1.3em;
+            }
+
+            .type span span {
+                width: 0%;
+                max-width: max-content;
+                overflow: hidden;
+                height: inherit;
+                word-break: break-all;
+                animation:
+                    c 0.5s infinite steps(1),
+                    t 2s linear infinite alternate;
+            }
+
+            .type span span:before {
+                content: " ";
+                overflow: hidden;
+                display: inline-block;
+            }
+
+        }
+
         .hero-title {
             color: var(--heading-color);
             font-size: 71.741px;
             font-style: normal;
             font-weight: 600;
             line-height: 105%;
-            margin-bottom: 35px;
-            margin-top: 35px;
-
-            span {
-                color: var(--primary-color);
-                font-size: 89.676px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 105%;
-            }
         }
 
         .hero-desp {
@@ -104,6 +135,12 @@
             width: 50%;
             height: 100%;
 
+            .hero-heading {
+                .type-writing {
+                    font-size: 50px;
+                }
+            }
+
             .hero-title {
                 font-size: 50px;
 
@@ -165,12 +202,19 @@
 @media screen and (max-width: 767px) {
     .hero-content {
         .hero-text {
+            .hero-heading {
+                .type-writing {
+                    font-size: 38px;
+                    overflow: hidden;
+
+                }
+
+            }
+
             .hero-title {
                 font-size: 43px;
 
-                span {
-                    font-size: 43px;
-                }
+
             }
         }
 
@@ -187,5 +231,50 @@
             padding-top: 20%;
             height: 500px;
         }
+    }
+}
+
+
+// .type {
+//     display: inline-flex;
+// }
+
+// .type span {
+//     height: 1.2em;
+//     width: 0%;
+//     word-break: break-all;
+//     overflow: hidden;
+//     // color: $primary;
+//     border-right: 3px solid $primary;
+//     animation: t 2s linear infinite alternate;
+// }
+
+// @keyframes t {
+
+//     90%,
+//     100% {
+//         width: 100%
+//     }
+// }
+
+
+@keyframes t {
+
+    90%,
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes c {
+
+    0%,
+    100% {
+        border-right: 5px solid black;
+    }
+
+    50% {
+        overflow: hidden;
+        border-right: 5px solid red;
     }
 }
